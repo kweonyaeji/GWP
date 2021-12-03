@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            header {
+              background: lightgray;
+              height: 215px;
+              padding: 5px;
+              text-align: center;
+              color: #a7a7a7;
+              font-size: 20px;
+            }
+            .header_point {
+                color: #fff29a;
+                font-size: 50px;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #ffffff;
+                text-align: center;
+            }
+            li {
+                /*카테고리 가로정렬 */
+                display: inline-block;
+            }
+            li a {
+                display: block;
+                color: #2f2a38;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active) {
+                background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+                color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+            }
+            li a:hover {
+                background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+                color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+            }
+            .active {
+                background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            }
+    
+            main {
+              background: #f2f4f7;
+              min-height: 400px;
+            }
+            footer {
+              background: darkgray;
+              height: 50px;
+              padding: 15px;
+              text-align: center;
+            }
+            table{border-spacing:10px;}
+          </style>
+          <script>
+          window.addEventListener('load', function() {
+              var signup = document.querySelector('#signup');
+              //signup버튼을 클릭했을때
+              signup.addEventListener('click', function() {
+                  // 아이디와 비번,성별,취미,생일,나이,이메일,메모 객체 셋팅 
+                  var name = document.querySelector('#name');
+                  var id = document.querySelector('#id');
+                  var pw1 = document.querySelector('#pw1');
+                  var pw2 = document.querySelector('#pw2');
+                  var email = document.querySelector('#email');
+                  // 전체 검사
+                  //이름이 공백이면
+                  if(name.value == ''){
+                      alert('이름을 입력하세요');
+                      name.focus();
+                    // 아이디가 공백이거나 4글자 미만이면
+                  } else if (id.value == '' || id.value.length < 4) {
+                      alert('아이디를 4자 이상 입력하세요');
+                      //id포커스
+                      id.focus();
+                      // 비밀번호가 4자리 미만이거나 숫자가 아닐때
+                    } else if (pw1.value.length < 4 ) {
+                        alert('비밀번호를 4자 이상 입력하세요');
+                        //비밀번호 포커스
+                        pw1.focus();
+                        // 비밀번호가 처음입력한 값과 다를시
+                    } else if (pw1.value != pw2.value) {
+                        alert('패스워드가 일치하지 않습니다.');
+                        pw2.focus();
+                        //이메일 제대로 입력 안되었을 시
+                    } else if (email.value == '') {
+                        alert('이메일을 입력하세요');
+                        email.focus();
+                    } // 전부완료되면 메인화면으로 이동
+                    else {
+                        location.href = "index.html";
+                    }
+                });
+            });
+        </script>
+    </head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="header_point">우리들의 RECIPE</h1>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
+            <h5 style='margin-top: 0;'><a href='login.html'>로그인 </a>|<a href='register.html'> 회원가입</a></h5>
+
+            <nav>
+                <ul>
+                   <li><a class="active" href="index.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
+                   <li><a href="#">한식</a></li>
+                   <li><a href="#">양식</a></li>
+                   <li><a href="#">중식</a></li>
+                   <li><a href="#">일식</a></li>
+                   <li><a href="#">나만의특별한레시피</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <center>
+              <br><br><br><br>
+              <h2>회원가입</h2>
+        <form name=fom>
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td><input type="text" id="name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td><input type="text" id="id" name="id"></td>
+                    </tr>
+                    <tr>
+                        <td>PW<br>확인
+                        </td>
+                        <td><input type="password" id="pw1" name="pw1"><br>
+                            <input type="password" id="pw2" name="pw2"></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td><input type="text" id="email" name="email"> @ <select
+                            id="url">
+                                <option>naver.com</option>
+                                <option>daum.net</option>
+                                <option>gmail.com</option>
+                                <option>seoultech.ac.kr</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="signup"value="signup"> 
+                            <input type="reset" value="reset">
+                        </td>
+                    </tr>
+                    </table>
+        </form>
+    </center>
+</article>
+</main>
+
+    <footer>
+        <div class="footer">
+            <a href='#'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
+        </div>
+    </footer>
+</body>
+</html>

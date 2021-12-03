@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리들의 RECIPE</title>
     <style>
         header {
           background: lightgray;
@@ -76,56 +77,21 @@
             <nav>
                 <ul>
                    <li><a class="active" href="index.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
-                   <li><a href="#">한식</a></li>
-                   <li><a href="#">양식</a></li>
-                   <li><a href="#">중식</a></li>
-                   <li><a href="#">일식</a></li>
-                   <li><a href="#">나만의특별한레시피</a></li>
+                   <li><a href="kor_list.html">한식</a></li>
+                   <li><a href="wes_list.html">양식</a></li>
+                   <li><a href="chn_list.html">중식</a></li>
+                   <li><a href="jpn_list.html">일식</a></li>
+                   <li><a href="spe_list.html">나만의특별한레시피</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
 
-    <main>
-      <article>
-        <center>
-          <br><br><br><br>
-          <h2>로그인</h2>
-          <form action="index.html" name="login_form">
-            <label for="fname">ID</label><br>
-            <input type="text" id="id" name="id" placeholder="아이디"><br><br>
-            <!-- input 박스 안 글자 넣기 = placeholder -->
-            <label for="lname">PassWord</label><br>
-            <input type="password" id="pw" name="pw" placeholder="비밀번호"><br><br>
-            <input type="button" id="signbutton" value="로그인">
-            <br><br>
-            <a href='register.html'>회원가입하시겠습니까?</a>
-          </form>
-        </center>
-      </article>
-      <script type="text/javascript">
-      var signinButton = document.getElementById("signbutton") // 버튼을 만들고.
-      signinButton.addEventListener('click', signinFunc) // 'click'이란 id의 버튼을 누르면 signinFunc 함수를 실행.
-      function signinFunc () {
-        var userid = document.getElementById("id").value; // userid 의 값을 받아와 넣음.
-        var userpw = document.getElementById("pw").value; // userpw 의 값을 받아와 넣음.
-        /*if(userid==" " || userpw==" "){
-          alert("아이디 또는 비밀번호를 입력하세요!");
-        }*/
-        if(userid == "admin" && userpw == "gwp2021!") {
-          //location.href="/public/main.html";
-        } else {
-          alert("로그인 실패");
-          history.back();
-        }
-        document.login_form.submit(); // 모두 확인 후 submit()
-    }
-    </script>
-    </main>
+    </header>
+    <main>양식레시피 목록 페이지입니다</main>
     <footer>
-      <div class="footer">
-          <a href='#'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
-      </div>
-  </footer>
-</body>
+        <div class="footer">
+            <a href='#'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
+        </div>
+    </footer>
+  </body>
 </html>

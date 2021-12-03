@@ -7,7 +7,7 @@ app.listen(3000, function(){
 })
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + "/public/main.html")
+    res.sendFile(__dirname + "/public/index.html")
 })
 
 app.use(express.static('public'))
