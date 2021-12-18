@@ -1,131 +1,140 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        header {
-          background: lightgray;
-          height: 215px;
-          padding: 5px;
-          text-align: center;
-          color: #a7a7a7;
-          font-size: 20px;
-        }
-        .header_point {
-            color: #fff29a;
-            font-size: 50px;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        li {
-            /*카테고리 가로정렬 */
-            display: inline-block;
-        }
-        li a {
-            display: block;
-            color: #2f2a38;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        li a:hover:not(.active) {
-            background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
-            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
-        }
-        li a:hover {
-            background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
-            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
-        }
-        .active {
-            background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
-            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-        }
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			header {
+              background: lightgray;
+              height: 215px;
+              padding: 5px;
+              text-align: center;
+              color: #a7a7a7;
+              font-size: 20px;
+            }
+            .header_point {
+                color: #fff29a;
+                font-size: 50px;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #ffffff;
+                text-align: center;
+            }
+            li {
+                /*카테고리 가로정렬 */
+                display: inline-block;
+            }
+            li a {
+                display: block;
+                color: #2f2a38;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active) {
+                background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+                color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+            }
+            li a:hover {
+                background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+                color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+            }
+            .active {
+                background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
+                text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            }
+    
+            main {
+              background: #f2f4f7;
+              min-height: 400px;
+            }
+            footer {
+              background: darkgray;
+              height: 50px;
+              padding: 15px;
+              text-align: center;
+            }
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<h1 class="header_point">우리들의 RECIPE</h1>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
+				<h5 style='margin-top: 0;'><a href='login.html'>로그인 </a>|<a href='register.html'> 회원가입</a></h5>
+	
+				<nav>
+					<ul>
+					   <li><a class="active" href="main.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
+					   <li><a href="#">한식</a></li>
+					   <li><a href="#">양식</a></li>
+					   <li><a href="#">중식</a></li>
+					   <li><a href="#">일식</a></li>
+					   <li><a href="#">나만의특별한레시피</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-        main {
-          background: #f2f4f7;
-          min-height: 400px;
-        }
-        footer {
-          background: darkgray;
-          height: 50px;
-          padding: 15px;
-          text-align: center;
-        }
-      </style>
-  </head>
-  <body>
-    <header>
-        <div class="header">
-            <h1 class="header_point">우리들의 RECIPE</h1>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
-            <h5 style='margin-top: 0;'><a href='login.html'>로그인 </a>|<a href='register.html'> 회원가입</a></h5>
+		<main>
+			<article>
+				<center>
+				  <br><br><br><br>
+				  <div class="login-form">
+					<h1>로그인</h1>
+					<form action="auth" method="POST">
+						<input type="text" name="username" placeholder="Username" required>
+						<input type="password" name="password" placeholder="Password" required>
+						<input type="submit">
+					</form>
+				</div>
+		</center>
+	</article>
+	</main>
 
-            <nav>
-                <ul>
-                   <li><a class="active" href="index.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
-                   <li><a href="#">한식</a></li>
-                   <li><a href="#">양식</a></li>
-                   <li><a href="#">중식</a></li>
-                   <li><a href="#">일식</a></li>
-                   <li><a href="#">나만의특별한레시피</a></li>
-                </ul>
-            </nav>
+	<footer>
+        <div class="footer">
+            <a href='https://github.com/kweonyaeji/GWP'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
         </div>
-    </header>
-
-    <main>
-      <article>
-        <center>
-          <br><br><br><br>
-          <h2>로그인</h2>
-          <form action="index.html" name="login_form">
-            <label for="fname">ID</label><br>
-            <input type="text" id="id" name="id" placeholder="아이디"><br><br>
-            <!-- input 박스 안 글자 넣기 = placeholder -->
-            <label for="lname">PassWord</label><br>
-            <input type="password" id="pw" name="pw" placeholder="비밀번호"><br><br>
-            <input type="button" id="signbutton" value="로그인">
-            <br><br>
-            <a href='register.html'>회원가입하시겠습니까?</a>
-          </form>
-        </center>
-      </article>
-      <script type="text/javascript">
-      var signinButton = document.getElementById("signbutton") // 버튼을 만들고.
-      signinButton.addEventListener('click', signinFunc) // 'click'이란 id의 버튼을 누르면 signinFunc 함수를 실행.
-      function signinFunc () {
-        var userid = document.getElementById("id").value; // userid 의 값을 받아와 넣음.
-        var userpw = document.getElementById("pw").value; // userpw 의 값을 받아와 넣음.
-        /*if(userid==" " || userpw==" "){
-          alert("아이디 또는 비밀번호를 입력하세요!");
-        }*/
-        if(userid == "admin" && userpw == "gwp2021!") {
-          //location.href="/public/main.html";
-        } else {
-          alert("로그인 실패");
-          history.back();
-        }
-        document.login_form.submit(); // 모두 확인 후 submit()
-    }
-    </script>
-    </main>
-    <footer>
-      <div class="footer">
-          <a href='#'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
-      </div>
-  </footer>
-</body>
+    </footer>
+	</body>
 </html>

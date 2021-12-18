@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            header {
+          background: lightgray;
+          height: 215px;
+          padding: 5px;
+          text-align: center;
+          color: #a7a7a7;
+          font-size: 20px;
+        }
+        .header_point {
+            color: #fff29a;
+            font-size: 50px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        li {
+            /*카테고리 가로정렬 */
+            display: inline-block;
+        }
+        li a {
+            display: block;
+            color: #2f2a38;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+        }
+        li a:hover {
+            background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+        }
+        .active {
+            background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+        }
+
+        main {
+          background: #f2f4f7;
+          min-height: 400px;
+        }
+        footer {
+          background: darkgray;
+          height: 50px;
+          padding: 15px;
+          text-align: center;
+        }
+            a{
+                text-decoration:none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <h1 class="header_point">우리들의 RECIPE</h1>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
+                <h5 style='margin-top: 0;'><a>yaeji님 환영합니다! </a>|<a href='mypage.html'> 마이페이지</a>|<a href='index.html'> 로그아웃</a></h5>
+    
+                <nav>
+                    <ul>
+                       <li><a class="active" href="main.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
+                       <li><a href="kor_list.html">한식</a></li>
+                       <li><a href="wes_list.html">양식</a></li>
+                       <li><a href="chn_list.html">중식</a></li>
+                       <li><a href="jpn_list.html">일식</a></li>
+                       <li><a href="spe_list.html">나만의특별한레시피</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+        </header>
+        <main>
+            <article>
+				<center>
+        <input type="button" id="write"value="write">
+        <table border="1" style="border-collapse:collapse">
+        <tr>
+        <tr>
+            <td><p style="text-align:right">작성자&nbsp;|&nbsp;날짜&nbsp;
+            </p></td>
+        </tr>
+        <td>
+            <p>테스트글입니다<br></p>
+        </td>
+    </tr>
+        <tr>
+            <td>
+                <p style="text-align:right;">
+                <a href="#">댓글</a>&nbsp;&nbsp;
+                <a href="#">수정</a>&nbsp;&nbsp;
+                <a href="#">삭제</a>&nbsp;&nbsp;
+            </p>
+            </td>
+        </tr>
+    </table>
+    </center>
+    </article>
+</main>
+<footer>
+    <div class="footer">
+        <a href='https://github.com/kweonyaeji/GWP'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
+    </div>
+</footer>
+    </body>
+</html>

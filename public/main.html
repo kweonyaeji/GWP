@@ -1,205 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-
-    <title>우리들의RECIPE</title>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리들의 RECIPE</title>
     <style>
-        /*상단 연노란색 P 부분*/
-.header_point {
-  color: #fff29a;
-  font-size: 60px;
-}
-/*상단 연회색 present, present 부분*/
-.header {
-  padding: 5px;
-  text-align: center;
-  background: #d7d0e3;
-  color: #a7a7a7;
-  font-size: 30px;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-li {
-  /*카테고리 가로정렬 */
-  display: inline-block;
-}
-
-li a {
-  display: block;
-  color: #2f2a38;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
-  text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-  color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
-}
-
-li a:hover {
-  background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
-  text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-  color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
-}
-
-.active {
-  background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
-  text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
-}
-
-.wrap {
-  position: realtive;
-  min-height: 100%;
-}
-
-
-        .cards {
-              background: #f6f0fa;
-              /* border: 1px solid #ffffff; */
-              padding: 10px;
-              margin: 0 auto;
-              overflow: hidden; /* float 속성인식 */
-
-            }
-
-        .card {
-            height: 400px;
-            width: 350px;
-            border-radius: 15px;
-            display: inline;
-            margin-top: 30px;
-            margin-left: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        header {
+          background: lightgray;
+          height: 215px;
+          padding: 5px;
+          text-align: center;
+          color: #a7a7a7;
+          font-size: 20px;
+        }
+        .header_point {
+            color: #fff29a;
+            font-size: 50px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
-            float: left;
-            }
-
-        .card-header{
-        	width: 100%;
-            height: 270px;
-        }
-
-        .card:hover .card-header  {
-            opacity: 0.8;
-            height: 100px;
-        }
-
-        .card-header-text {
-            background-color: #fa2414 ;
-            color: #FFF ;
-            font-weight: bold ;
-            text-align: center ;
-            float: right;
-            margin: 15px 15px 15px 15px;
-            border-radius: 50%;
-            font-weight: bold;
-            padding: 10px 10px 10px 10px;
-            line-height: 30px;
-        }
-
-        .card-body-header{
-            margin: 10px 20px 0px 20px;
-        }
-
-
-        .card-body-hashtag {
-            color: #2478ff;
-        }
-
-        .btn btn-outline-danger{
-        margin: 0 auto;
-        }
-
-        .footer {
-            width: 100%;
-            height:50px;
-            bottom: 0;
-            left:0;
-            padding: 5px;
+            background-color: #ffffff;
             text-align: center;
-            background: #d7d0e3;
-            color: #a7a7a7;
-            font-size: 10px;
-            position: absolute;
-         }
-    </style>
-</head>
+        }
+        li {
+            /*카테고리 가로정렬 */
+            display: inline-block;
+        }
+        li a {
+            display: block;
+            color: #2f2a38;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color: #e7e4ec; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+        }
+        li a:hover {
+            background-color: b1a4c9; /* 메뉴에 마우스 올렸을 때 색상 변화 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+            color: #8b79ae; /* 메뉴에 마우스 올렸을 때 글자 색 */
+        }
+        .active {
+            background-color: #b1a4c9; /*활성화(보고있는페이지) 메뉴 색 */
+            text-decoration: none; /* 메뉴에 마우스 올렸을 때 링크 밑줄 없애기*/
+        }
 
-<body>
-    <div class="header">
-        <h1 class="header_point">우리들의 RECIPE</h1>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
-        <h5 style='margin-top: 0;'><a href='login.html'>로그인 </a>|<a href='register.html'> 회원가입</a></h5>
-    </div>
-    <nav>
-        <ul>
-           <li><a class="active" href="#home">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
-           <li><a href="brithday.html">한식</a></li>
-           <li><a href="#success">양식</a></li>
-           <li><a href="#marriage">중식</a></li><li>
-               <a href="#marriage">일식</a></li>
-           <li><a href="#anniversary">나만의특별한레시피</a></li>
-        </ul>
-    </nav>
-       <div class="wrap">
+        main {
+          background: #f2f4f7;
+          min-height: 400px;
+        }
+        footer {
+          background: darkgray;
+          height: 50px;
+          padding: 15px;
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+        <div class="header">
+            <h1 class="header_point">우리들의 RECIPE</h1>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>컴퓨터공학과 19101190 권예지의 고급웹 프로그래밍 웹페이지입니다</p>
+            <h5 style='margin-top: 0;'><a>yaeji님 환영합니다! </a>|<a href='mypage.html'> 마이페이지</a>|<a href='index.html'> 로그아웃</a></h5>
 
-   <div class="card">
-    <!-- 각 카드 헤더 -->
-    <div class="card-header">
-        <div class="card-header-text">
-            HOT
+            <nav>
+                <ul>
+                   <li><a class="active" href="main.html">홈</a></li> <!--class = "active"는 활성화 된 메뉴는 별도 색으로 표시하기 위해 만들었다.-->
+                   <li><a href="kor_list.html">한식</a></li>
+                   <li><a href="wes_list.html">양식</a></li>
+                   <li><a href="chn_list.html">중식</a></li>
+                   <li><a href="jpn_list.html">일식</a></li>
+                   <li><a href="spe_list.html">나만의특별한레시피</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <!--  카드 바디 헤더 -->
-    <div class="card-body-header">
-        <img src="">
-        <h1>알리오올리오</h1>
-        <p class="card-body-hashtag">#양식 #간단한 #연인과함께</p>
-        <p>
-            평범한 알리오올리오와는 다른 맛.
-            아주 간편하고 빠르게, 하지만 맛은 퀄리티있게
-            모두가 쉽게 만들 수 있어요!
-        </p>
-        <a class="btn btn-outline-danger" href="#" role="button">자세히 보기</a>
-    </div>
-</div>
-</div>
 
-    <div class="footer">
-        <a href='#'>사업자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
-    </div>
-
-
-</body>
+    </header>
+    <main>메인</main>
+    <footer>
+        <div class="footer">
+            <a href='https://github.com/kweonyaeji/GWP'>제작자정보</a> | <a href = 'https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EB%94%94%EC%A7%80%ED%84%B8%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%9D%B4%EC%9A%A9%20%ED%91%9C%EC%A4%80%EC%95%BD%EA%B4%80'>이용약관</a>
+        </div>
+    </footer>
+  </body>
 </html>
