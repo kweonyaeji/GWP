@@ -56,88 +56,6 @@
           min-height: 400px;
         }
 
-        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-        html {
-          font-family: "Noto Sans KR", sans-serif;
-        }
-        
-        .con {
-          margin-left: 20px;
-          margin-right: 20px;
-          margin-top: 80px;
-          
-        }
-
-        .cell {
-          float: left;
-          box-sizing: border-box;
-          margin-bottom: 20px;
-        }
-        .row::after {
-          content: "";
-          display: block;
-          clear: both;
-        }
-        .img-box > img {
-          display: block;
-          width: 100%;
-          height: 150px;
-        }
-
-        .list > ul > li {
-          width: calc(100% / 6);
-        }
-
-.list > ul > li {
-    padding: 0 10px;
-}
-.list > ul {
-    margin: 0 -10px;
-}
-
-.list > ul > li > .product-name {
-    text-align: Center;
-    font-weight: bold;
-}
-.list > ul > li:hover > .product-name {
-    text-decoration: underline;
-}
-.list > ul > li > .product-price {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-
-@media (max-width: 800px) {
-    .list > ul > li {
-        width: calc(100% / 5);
-    }
-}
-
-@media (max-width: 650px) {
-    .list > ul > li {
-        width: calc(100% / 4);
-    }
-}
-
-@media (max-width: 500px) {
-    .list > ul > li {
-        width: calc(100% / 3);
-    }
-}
-
-@media (max-width: 400px) {
-    .list > ul > li {
-        width: calc(100% / 2);
-    }
-}
-
-@media (max-width: 300px) {
-    .list > ul > li {
-        width: calc(100% / 1);
-    }
-}
         footer {
           background: darkgray;
           height: 50px;
@@ -172,26 +90,29 @@
     </header>
     <main>
         <article>
-            <div class="list con">
-                <h2>나만의 특별한 레시피</h2>
-                <ul class="row">
-                    <li class="cell">
-                        <a href="login.html" target="_blank"><div class="img-box"><img src="duriankimchi.jpg" alt=""></div></a>
-                        <div class="product-name"><a href='spe_list.html'> 카테고리: 나만의특별한</a></div>
-                        <div class="product-price">두리안김치</div>
-                    </li>
-                    <li class="cell">
-                        <a href="login.html" target="_blank"><div class="img-box"><img src="japtangchigae.jpg" alt=""></div></a>
-                        <div class="product-name"><a href='spe_list.html'> 카테고리: 나만의특별한</a></div>
-                        <div class="product-price">잡탕찌개</div>
-                    </li>
-                    <li class="cell">
-                        <a href="login.html" target="_blank"><div class="img-box"><img src="denjangramen.jpg" alt=""></div></a>
-                        <div class="product-name"><a href='spe_list.html'> 카테고리: 나만의특별한</a></div>
-                        <div class="product-price">된장라면</div>
-                    </li>
-                </ul>
-            </div>
+            <center>
+                <br>
+                <br>
+                <br>
+                <h2>비빔밥</h2>
+                <img src="bibimbab.jpg" alt="" width=300px, height=250px>
+                <p style="text-align:center;">@비빔밥을 만드는 방법@</p>
+                <p style="text-align:center;">1. 양파, 당근, 애호박을 채썰어서 준비합니다.</p>
+                <p style="text-align:center;">2. 비빔밥에 비벼먹을 양념장을 준비합니다.
+                    고추장 2T +간장 2T+설탕 1.5T+깨소금, 참기름 +식초 1T를 넣고 잘섞어
+                    양념장을 만듭니다.</p>
+                <p style="text-align:center;">3. 먼저 당근을 소금 1꼬집 넣고
+                    색깔이 나게 볶아줍니다.</p>
+                <p style="text-align:center;">4. 애호박도 소금 1꼬집 넣고 볶아줍니다.</p>
+                <p style="text-align:center;">5. 양파는 간장 1T 넣고 중불에
+                    볶아줍니다. 꽤 오래 볶아서 단맛이 나게 볶아줍니다.</p>
+                <p style="text-align:center;">6. 소금, 후추로 밑간해 놓은
+                    채썰어준 돼지고기를 볶아줍니다.
+                    익은 돼지고기를 아까 만들어 놓은 양념장과 섞어 줍니다.</p>
+                <p style="text-align:center;">7. 따뜻한 밥위에 볶아 놓은 야채를 올리고
+                    반숙 계란 후라이, 양념장을 크게 1T 떠서 셋팅하면 비빔밥 완성!</p>
+
+            </center>
         </article>
     </main>
     <footer>
